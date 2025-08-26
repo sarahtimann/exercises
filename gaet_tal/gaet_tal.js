@@ -8,7 +8,7 @@ document.getElementById("guess-button").addEventListener("click", function () {
   const messageEl = document.getElementById("message");
 
   if (guess === secretNumber) {
-    messageEl.innerHTML = "Du gættede korrekt! Tallet var " + secretNumber;
+    messageEl.innerHTML = "Du gættede korrekt! 🎉 Tallet var " + secretNumber;
     messageEl.classList.add("correct");
   } else if (guess > secretNumber) {
     messageEl.innerHTML = "Dit gæt er for højt!";
