@@ -6,7 +6,7 @@ const btn = document.querySelector("button");
 const input = document.querySelector("input");
 const h2 = document.querySelector("h2");
 
-const computerNum = Math.floor(Math.random() * 100) + 1;
+const computerNum = Math.floor(Math.random() * 100) + 1; // Man kunne også skrive 101 istedet for, at bruge det sidste + 1, da 100 kun er til 99, derfor man har brug for det sidste + 1, for at tillade gæt helt op til 100
 // let brugerGuess;
 
 btn.addEventListener("click", klik_btn);
