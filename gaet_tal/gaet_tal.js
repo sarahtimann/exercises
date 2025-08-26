@@ -1,21 +1,52 @@
-console.log("Tilfældigt tal " + Math.floor(Math.random() * 100));
+// Øvelse lavet i undervisningen //
 
-const num = (secretNumber = Math.floor(Math.random() * 100));
+"use strict";
 
-document.getElementById("guess-button").addEventListener("click", function () {
-  const guess = parseInt(document.getElementById("guess-input").value);
+const btn = document.querySelector("button");
+const input = document.querySelector("input");
+const h2 = document.querySelector("h2");
 
-  const messageEl = document.getElementById("message");
+const computerNum = Math.floor(Math.random() * 100) + 1;
+// let brugerGuess;
 
-  if (guess === secretNumber) {
-    messageEl.innerHTML = "Du gættede korrekt! 🎉 Tallet var " + secretNumber;
-    messageEl.classList.add("correct");
-  } else if (guess > secretNumber) {
-    messageEl.innerHTML = "Dit gæt er for højt!";
+btn.addEventListener("click", klik_btn);
+function klik_btn() {
+  const brugerGuess = input.value;
+
+  //   console.log("computerNum", computerNum);
+  //   console.log("brugerGuess", brugerGuess);
+  let feedbackText;
+  if (brugerGuess < computerNum) {
+    feedbackText = "Det er for lavt, prøv igen";
+  } else if (brugerGuess > computerNum) {
+    feedbackText = "Det er for højt, prøv";
   } else {
-    messageEl.innerHTML = "Dit gæt er for lavt!";
+    feedbackText = "Du har gættet rigtigt! 🎉";
   }
-});
+  h2.textContent = feedbackText;
+  console.log(feedbackText);
+}
+
+// Øvelse lavet af mig selv //
+
+// console.log("Tilfældigt tal " + Math.floor(Math.random() * 100));
+
+// const num = (secretNumber = Math.floor(Math.random() * 100));
+
+// document.getElementById("guess-button").addEventListener("click", function () {
+//   const guess = parseInt(document.getElementById("guess-input").value);
+
+//   const messageEl = document.getElementById("message");
+
+//   if (guess === secretNumber) {
+//     messageEl.innerHTML = "Du gættede korrekt! 🎉 Tallet var " + secretNumber;
+//     messageEl.classList.add("correct");
+//   } else if (guess > secretNumber) {
+//     messageEl.innerHTML = "Dit gæt er for højt!";
+//   } else {
+//     messageEl.innerHTML = "Dit gæt er for lavt!";
+//   }
+// });
 
 // Lille øvelse fra 1. video nedenfor //
 // const bool = true;
@@ -45,12 +76,13 @@ document.getElementById("guess-button").addEventListener("click", function () {
 // myString = parseInt(myString);
 // console.log("typof 2", typeof myString);
 
-// console.log("Test af plus"); // Spørgsmål til disse linjer, hvad er meningen?
+// console.log("Test af plus"); //
 // const n1 = 1;
 // const n2 = 2;
 
 // const s1 = "1";
 // const s2 = "2";
+// console.log(s1 + n2);
 
 // n1 + n2;
 // s1 + s2;

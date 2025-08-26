@@ -1,10 +1,13 @@
+#message {
+  border-radius: 8px;
+  display: inline-block;
+  margin: 10px 0 0 0;
+}
+
 .correct {
   animation: pop 0.6s ease forwards;
   background-color: lightgreen;
-  margin: 10px 0 0 0;
   padding: 10px;
-  border-radius: 8px;
-  display: inline-block;
 }
 
 @keyframes pop {
