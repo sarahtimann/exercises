@@ -1,0 +1,8 @@
+h1 {
+  color: red;
+}
+
+.noclick {
+  pointer-events: none;
+  opacity: 0.5;
+}
