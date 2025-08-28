@@ -74,8 +74,7 @@ function animationEnd() {
 function getResult() {
   if (userChoice === computerChoice) {
     return "draw"; // Hvis spiller og computer vælger det samme = uafgjort
-  }
-  if ((userChoice === "rock" && computerChoice === "scissors") || (userChoice === "paper" && computerChoice === "rock") || (userChoice === "scissors" && computerChoice === "paper")) {
+  } else if ((userChoice === "rock" && computerChoice === "scissors") || (userChoice === "paper" && computerChoice === "rock") || (userChoice === "scissors" && computerChoice === "paper")) {
     return "win"; // Hvis spilleren vinder
   }
   return "lose"; // Hvis spilleren taber
@@ -90,3 +89,10 @@ function showResultScreen(result) {
   // Nedenfor sørger for kun det resultat der matcher #win eller #draw vises
   document.querySelector(`#${result}`).classList.remove("hidden");
 }
+
+// function removeResultScreen() {
+//   console.log("Fjern skærme");
+//   document.querySelector("#win").classList.add("hidden");
+//   document.querySelector("#lose").classList.add("hidden");
+//   document.querySelector("#draw").classList.add("hidden");
+// }
