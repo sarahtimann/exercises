@@ -8,6 +8,9 @@ const guessHigh = document.querySelector("#guess-high");
 const guessCorrect = document.querySelector("#guess-correct");
 
 let computerChoice;
+let min = 0;
+let max = 100;
+
 const title = document.querySelector("h2");
 
 addEventListenersToButtons();
@@ -28,24 +31,41 @@ function pressStart() {
   guessHigh.classList.remove("noclick");
   guessCorrect.classList.remove("noclick");
   console.log("Spil startet");
+
+  // nulstil intervallet
+  min = 0;
+  max = 100;
+
   computerNumber();
 }
 
 hideButtons();
 
 function computerNumber() {
-  computerChoice = Math.floor(Math.random() * 100) + 1;
+  // i stedet for tilfældigt tal → gæt midten af intervallet
+  computerChoice = Math.floor((min + max) / 2);
   title.textContent = `Computerens gæt er: ${computerChoice}`;
   console.log("Computerens gæt er", computerChoice);
-  clickWrong();
-  clickCorrect();
 }
 
 function clickWrong() {
-  guessLow.addEventListener("click", computerNumber);
-  guessHigh.addEventListener("click", computerNumber);
+  guessLow.addEventListener("click", () => {
+    min = computerChoice + 1; // tallet er højere
+    computerNumber();
+  });
+
+  guessHigh.addEventListener("click", () => {
+    max = computerChoice - 1; // tallet er lavere
+    computerNumber();
+  });
 }
 
 function clickCorrect() {
-  guessCorrect.addEventListener("click", hideButtons);
+  guessCorrect.addEventListener("click", () => {
+    title.textContent = `Yes! Computeren gættede rigtigt: ${computerChoice}`;
+    hideButtons();
+  });
 }
+
+clickWrong();
+clickCorrect();
