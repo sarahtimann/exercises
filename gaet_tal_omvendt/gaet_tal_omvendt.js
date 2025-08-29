@@ -64,7 +64,7 @@ function clickWrong() {
 
 function clickCorrect() {
   guessCorrect.addEventListener("click", () => {
-    title.textContent = `Yes! Computeren gættede rigtigt: ${computerChoice}`;
+    title.textContent = `Flot! Computeren gættede rigtigt: ${computerChoice}`;
     hideButtons();
   });
 }
