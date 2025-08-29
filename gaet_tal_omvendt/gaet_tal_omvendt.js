@@ -38,12 +38,12 @@ function pressStart() {
   min = 0;
   max = 100;
 
-  computerNumber();
+  computerGuess();
 }
 
 hideButtons();
 
-function computerNumber() {
+function computerGuess() {
   // Istedet for computeren gætter et tilfældigt tal, så gætter den i midten af intervallet
   computerChoice = Math.floor((min + max) / 2);
   title.textContent = `Computerens gæt er: ${computerChoice}`;
@@ -53,12 +53,12 @@ function computerNumber() {
 function clickWrong() {
   guessLow.addEventListener("click", () => {
     min = computerChoice + 1; // Ligger 1 til hvis tallet er højere
-    computerNumber();
+    computerGuess();
   });
 
   guessHigh.addEventListener("click", () => {
     max = computerChoice - 1; // Tager 1 fra hvis tallet er lavere
-    computerNumber();
+    computerGuess();
   });
 }
 
