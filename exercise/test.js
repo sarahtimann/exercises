@@ -16,6 +16,11 @@
 //   return `Hello ${firstName}`;
 // }
 
+// console.log(greeting("Alfons Åberg"));
+// const sayHi = greeting;
+
+// console.log(sayHi("Cirkeline"));
+
 // function lengthOfStr(str) {
 //   return str.length;
 // }
@@ -32,9 +37,9 @@
 
 // const textContent = `Greeting is ${greeting("a name")}`;
 
-function getRandomNum(max) {
-  return Math.floor(Math.random() * max);
-}
-const myRandomNum = getRandomNum(100);
+// function getRandomNum(max) {
+//   return Math.floor(Math.random() * max);
+// }
+// const myRandomNum = getRandomNum(100);
 
-console.log("myRandomNum fra 0 til 100 er", getRandomNum());
+// console.log("myRandomNum fra 0 til 100 er", getRandomNum());

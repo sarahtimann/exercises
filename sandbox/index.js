@@ -21,12 +21,13 @@
 
 // console.log(letters[4]);
 
-let result;
-const people = ["Harry", "Ron", "Hermione"];
+// let result;
+// const people = ["Harry", "Ron", "Hermione"];
+// let result = people.shift();
 
 // result = people.push("Draco");
-// console.log("people", people);
 // console.log("result", result);
+// console.log("people", people);
 
 // result = people.pop();
 // console.log("people", people);
@@ -76,8 +77,57 @@ const people = ["Harry", "Ron", "Hermione"];
 // const arr3 = [...str];
 // console.log(arr3);
 
-const array = ["one", "two", "three"];
-const arrayCopy = [...array];
-array[1] = "twemty";
-console.log("array", array);
-console.log("arrayCopy", arrayCopy);
+// const array = ["one", "two", "three"];
+// const arrayCopy = [...array];
+// array[1] = "twemty";
+// console.log("array", array);
+// console.log("arrayCopy", arrayCopy);
+
+function hire(person) {
+  person.hired = true;
+}
+
+function fire(person) {
+  person.fired = false;
+}
+
+const person3 = {
+  firstName: "Harry",
+  lastName: "Potter",
+  hired: false,
+};
+
+const person4 = {
+  firstName: "Fred",
+  lastName: "Weasley",
+  hired: false,
+};
+
+function fireOrHire(action, person) {
+  action(person);
+}
+
+console.log("person3", person3);
+fireOrHire(hire, person3);
+console.log("person3", person3);
+
+// function conGreet(firstName) {
+//   console.log(`Hello ${firstName}`);
+// }
+
+// setTimeout(conGreet, 1000, "Ron");
+
+// const postUrl = "https://jsonplaceholder.typicode.com/posts";
+
+// function loadJSON(url, callback) {
+//   fetch(url)
+//     .then((response) => response.json)
+//     .then((jsonData) => callback(jsonData));
+// }
+
+// function prepareData(data) {
+//   console.table(data);
+//   data.forEach((element) => {
+//     document.querySelector("body").innerHTML += `<h1>${element.title}</h1>`;
+//   });
+// }
