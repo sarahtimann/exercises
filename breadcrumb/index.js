@@ -10,7 +10,7 @@ function klik() {
   let str = "";
   bc.forEach((elm, i) => {
     // str += `<li><a href="${elm.link}">${elm.name}</a></li>`;
-    // Tilføj separator hvis det ikke er sidste element
+    // Tilføj separator hvis det ikke er sids te element
     if (i < bc.length - 1) {
       str += `<li><a href="${elm.link}">${elm.name}</a></li>`;
       str += " / ";
