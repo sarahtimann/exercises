@@ -25,6 +25,11 @@ console.log("onlyElectricVehicles:", onlyElectricVehicles);
 
 showTheseVehicles(onlyElectricVehicles);
 
+document.getElementById("electric").addEventListener("click", () => {
+  tbodyPointer.innerHTML = "";
+  showTheseVehicles(onlyElectricVehicles);
+});
+
 // Funktion for alle fartøjer med mere end 2 sæder
 function hasMoreThanTwoSeats(vehicle) {
   return vehicle.passengers > 2;
@@ -33,6 +38,11 @@ const vehiclesWithMoreThanTwoSeats = vehicles.filter(hasMoreThanTwoSeats);
 console.log("vehiclesWithMoreThanTwoSeats:", vehiclesWithMoreThanTwoSeats);
 
 showTheseVehicles(vehiclesWithMoreThanTwoSeats);
+
+document.getElementById("two-seats").addEventListener("click", () => {
+  tbodyPointer.innerHTML = "";
+  showTheseVehicles(vehiclesWithMoreThanTwoSeats);
+});
 
 // Funktion for alle fartøjer ejet af Jonas
 function isElectricAndOwnedByJonas(vehicle) {
@@ -44,6 +54,11 @@ console.log("electricVehiclesOwnedByJonas:", electricVehiclesOwnedByJonas);
 
 showTheseVehicles(electricVehiclesOwnedByJonas);
 
+document.getElementById("jonas").addEventListener("click", () => {
+  tbodyPointer.innerHTML = "";
+  showTheseVehicles(electricVehiclesOwnedByJonas);
+});
+
 // Funktion for rugbrødsfartøjer med plads til mere end en
 
 function isRugbrødWithMoreThanOneSeat(vehicle) {
@@ -54,6 +69,16 @@ const rugbrødVehiclesWithMoreThanOneSeat = vehicles.filter(isRugbrødWithMoreTh
 console.log("rugbrødVehiclesWithMoreThanOneSeat:", rugbrødVehiclesWithMoreThanOneSeat);
 
 showTheseVehicles(rugbrødVehiclesWithMoreThanOneSeat);
+
+document.getElementById("rugbrod").addEventListener("click", () => {
+  tbodyPointer.innerHTML = "";
+  showTheseVehicles(rugbrødVehiclesWithMoreThanOneSeat);
+});
+
+document.getElementById("all-vehicles").addEventListener("click", () => {
+  tbodyPointer.innerHTML = "";
+  showTheseVehicles(vehicles);
+});
 
 function showTheseVehicles(arr) {
   arr.forEach((each) => {
