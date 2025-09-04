@@ -41,25 +41,3 @@ selectElement.addEventListener("change", (event) => {
   selectedLanguage = event.target.value;
   switchLanguage(selectedLanguage);
 });
-
-// document.getElementById("de").addEventListener("click", () => switchLanguage("de"));
-
-// const btnDa = document.getElementById("da");
-// const btnDe = document.getElementById("de");
-
-// btnDa.addEventListener("click", () => switchLanguage("da"));
-// btnDe.addEventListener("click", () => switchLanguage("de"));
-
-// const btnDa = document.querySelector(".da");
-// const btnDe = document.querySelector(".de");
-
-// selectElement.addEventListener("change", (event) => {
-//   const selectedLanguage = event.target.value;
-//   // Update the locale variable
-//   locale = selectedLanguage;
-
-//   // Update the text content based on the selected language
-//   texts[locale].texts.forEach((obj) => {
-//     document.querySelector(obj.location).textContent = obj.text;
-//   });
-// });
