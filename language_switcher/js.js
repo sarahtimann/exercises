@@ -33,11 +33,22 @@ function switchLanguage(newLocale) {
   });
 }
 
-document.getElementById("de").addEventListener("click", () => switchLanguage("de"));
+const selectElement = document.getElementById("language-switcher");
 
-// texts[localeDe].texts.forEach((obj) => {
-//   document.querySelector(obj.location).textContent = obj.text;
-// });
+let selectedLanguage = locale;
+
+selectElement.addEventListener("change", (event) => {
+  selectedLanguage = event.target.value;
+  switchLanguage(selectedLanguage);
+});
+
+// document.getElementById("de").addEventListener("click", () => switchLanguage("de"));
+
+// const btnDa = document.getElementById("da");
+// const btnDe = document.getElementById("de");
+
+// btnDa.addEventListener("click", () => switchLanguage("da"));
+// btnDe.addEventListener("click", () => switchLanguage("de"));
 
 // const btnDa = document.querySelector(".da");
 // const btnDe = document.querySelector(".de");
