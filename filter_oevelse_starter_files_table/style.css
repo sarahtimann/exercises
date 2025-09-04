@@ -14,13 +14,14 @@ caption {
 
 thead,
 tfoot {
-  background-color: rgb(228 240 245);
+  background-color: rgb(230, 245, 255);
 }
 
 th,
 td {
   border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 td:last-of-type {
@@ -37,4 +38,16 @@ tfoot th {
 
 tfoot td {
   font-weight: bold;
+}
+
+button {
+  margin: 0 10px 10px 0;
+  background-color: rgb(237 238 242);
+  border-radius: 5px;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button:hover {
+  background-color: rgb(183, 225, 255);
 }
