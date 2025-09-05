@@ -1,0 +1,28 @@
+body {
+  background-color: lightgrey;
+}
+
+#message {
+  margin-top: 20px;
+  padding: 10px;
+  background: #a4d0da;
+  border: 1px solid #5ea7ff;
+  color: black;
+  display: none; /* Skjult fra start */
+}
+
+#btn {
+  background-color: #c8ffaf; /* Grøn baggrund */
+  border: 1px solid green;
+  padding: 10px;
+  cursor: pointer; /* Pointer cursor ved hover */
+}
+
+#btn:hover {
+  background-color: #abff84; /* Mørkere grøn ved hover */
+}
+
+.good-word {
+  color: rgb(0, 99, 26);
+  font-weight: bold;
+}
