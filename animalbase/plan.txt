@@ -18,3 +18,14 @@ Sorting
 combining Filtering AND sorting !
 
 - other fixes after that
+Updating the sort and direction in the UI
+
+Stars
+- remember Model, View, Controller!
+- 1. Model
+- add star to animal
+- 2. View
+- add visible (fixed) star to each animal in the list
+- get the star status from the model, and display that in the list
+- 3. Controller
+- add user interactivityto to turn stars on and off
