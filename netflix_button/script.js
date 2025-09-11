@@ -12,6 +12,8 @@ timeSprite.addEventListener("animationend", () => {
 
 // Når musen bevæger sig, sæt animationen til at køre hurtigt til slut
 document.addEventListener("mousemove", () => {
-  // Sæt animationen til at køre hurtigt (fx 0.3s)
-  timeSprite.style.animationDuration = "2s";
+  timeSprite.classList.remove("tid");
+  void timeSprite.offsetWidth;
+  timeSprite.style.animationDuration = "1s"; // Kort varighed
+  timeSprite.classList.add("tid");
 });
