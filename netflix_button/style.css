@@ -1,0 +1,50 @@
+#netflix-button {
+  position: relative;
+  overflow: hidden;
+  padding: 4px 7px 4px 7px;
+  width: 180px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  color: black;
+  background-color: rgb(231, 231, 231);
+  font-family: "Times New Roman", Times, serif;
+}
+
+#time_container {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 40px;
+  overflow: hidden;
+}
+
+#time_sprite {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  right: 0;
+  transform-origin: right center;
+}
+
+.tid {
+  animation-name: tid_kf;
+  animation-duration: 15s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tid_kf {
+  from {
+    width: 100%; /* Starter med fuld bredde */
+    background-color: red;
+  }
+  to {
+    width: 0%; /* Ender med ingen bredde */
+    background-color: darkred;
+  }
+}
