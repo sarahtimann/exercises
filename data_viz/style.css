@@ -1,0 +1,19 @@
+#data-output {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+#queue-bar-container {
+  width: 450px;
+  height: 24px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#queue-bar {
+  height: 100%;
+  background: #01b646;
+  width: 0;
+  transition: width 0.5s;
+}
