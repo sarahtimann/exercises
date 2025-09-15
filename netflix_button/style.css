@@ -1,50 +1,44 @@
-#netflix-button {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
   position: relative;
-  overflow: hidden;
-  padding: 4px 7px 4px 7px;
-  width: 180px;
-  font-size: 1.2rem;
-  border: none;
+  padding: 20px 50px;
+  font-size: 20px;
   cursor: pointer;
-  color: black;
-  background-color: rgb(231, 231, 231);
-  font-family: "Times New Roman", Times, serif;
-}
-
-#time_container {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 200px;
-  height: 40px;
   overflow: hidden;
 }
+p {
+  position: relative;
+  z-index: 1;
+}
+body {
+  padding: 50px;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+}
 
-#time_sprite {
+.progress {
   position: absolute;
-  width: 100%;
+  bottom: 0;
+  left: 0;
   height: 100%;
-  opacity: 0.4;
-  right: 0;
-  transform-origin: right center;
+  width: 0%;
+  background: lightpink;
 }
 
-.tid {
-  animation-name: tid_kf;
-  animation-duration: 15s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+.progress.animate {
+  animation: timer 5s linear forwards;
 }
 
-@keyframes tid_kf {
+@keyframes timer {
   from {
-    width: 100%; /* Starter med fuld bredde */
-    background-color: red;
+    width: 0%;
   }
   to {
-    width: 0%; /* Ender med ingen bredde */
-    background-color: darkred;
+    width: 100%;
   }
 }
